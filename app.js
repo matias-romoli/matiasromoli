@@ -20,7 +20,7 @@ app.get("/work", (req, res) => {
 
 app.get("/api/posts", async (req, res) => {
   try {
-    const response = await axios.get(process.env.URI);
+    const response = await axios.get("https://diagonalalaro.com.ar/wp-json/wp/v2/posts?author=23");
     res.json(response.data);
   } catch (error) {
     console.error("Error al obtener los posts:", error);
