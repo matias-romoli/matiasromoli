@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+*,
+*::after,
+*::before {
+  font-family: "Open Sans", serif;
+  box-sizing: border-box;
+  font-display: swap;
+  padding: 0px;
+  margin: 0px;
+}
+.home {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+.home::after {
+  background: radial-gradient(circle, #84848415 10%, transparent 10%);
+  animation: moveDots 2.5s ease-in-out infinite;
+  background-size: 10px 10px;
+  position: absolute;
+  content: "";
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+.flex {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+.none {
+  outline: none;
+  border: none;
+}
+.home {
+  background-color: #181619;
+}
+.home__title > p:nth-child(1) {
+  letter-spacing: 5px;
+  user-select: none;
+  font-weight: 600;
+  font-size: 100px;
+}
+.home__title > p:nth-child(2) {
+  position: absolute;
+  font-weight: 600;
+  bottom: 5px;
+  left: 5px;
+}
+.home__title {
+  margin-bottom: 10px;
+  position: relative;
+  user-select: none;
+}
+.home__button:hover {
+  background-color: #84848475 !important;
+  color: #fff !important;
+  transition: 0.5s;
+}
+.home__description {
+  padding-bottom: 10px;
+  user-select: none;
+  color: #848484;
+}
+.home__button {
+  background-color: #e32f21 !important;
+  font-weight: 300 !important;
+  color: #fff !important;
+  letter-spacing: 0.5px;
+  border-radius: 3px;
+  padding: 10px 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .home__title > p:nth-child(1) {
+    font-size: 80px;
+  }
+  .home__title > p:nth-child(2) {
+    font-size: 14px;
+  }
+  .home__description {
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 14px;
+  }
+  .home__button {
+    padding: 6px 10px !important;
+    font-size: 14px !important;
+  }
+}
+@keyframes moveDots {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
